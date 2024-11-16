@@ -10,31 +10,41 @@
 </head>
 <body>
     <nav class="nav-conteiner">
-        <h3><a class="title-link" href="./index.html">Sistema educativo</a></h3>
+        <!-- Enlace de Sistema Educativo, al hacer clic muestra la primera sección -->
+        <h3><a class="title-link" href="#section1" data-section="section1">Sistema educativo</a></h3>
         <div class="conteiner-button">
-            <a class="button" href="#section1" data-section="section1">Contenido Teórico</a>
-            <a class="button" href="#section2" data-section="section2">Contenido Práctico</a>
+            <a class="button" href="#section2" data-section="section2">Contenido Teórico</a>
+            <a class="button" href="#section3" data-section="section3">Contenido Práctico</a>
         </div>
-        
     </nav>
     <div id="content">
         <!-- Secciones del contenido -->
-        <section id="section1" class="content-section" style="display: none;">
+
+        <!-- Pagina de inicio -->
+        <section id="section1" class="content-section" style="display: block;">
+            <h2>home</h2>
+            <p>Este es el contenido que se muestra inicialmente.</p>
+        </section>
+
+        <!-- Primer boton de contenido  Teórico-->
+        <section id="section2" class="content-section" style="display: none;">
             <h2>Contenido Teórico</h2>
             <p>Este es el contenido teórico que se muestra dinámicamente debajo del menú.</p>
         </section>
-        <section id="section2" class="content-section" style="display: none;">
+
+        <!-- Segundo boton de contenido Practico -->
+        <section id="section3" class="content-section" style="display: none;">
             <h2>Contenido Práctico</h2>
             <p>Este es el contenido práctico que se muestra dinámicamente debajo del menú.</p>
         </section>
     </div>
 
     <script>
-        // Selecciona todos los botones
-        const buttons = document.querySelectorAll('.button');
+        // Selecciona todos los botones y enlaces
+        const buttons = document.querySelectorAll('.button, .title-link');
         const sections = document.querySelectorAll('.content-section');
 
-        // Añade evento de clic a cada botón
+        // Añade evento de clic a cada botón o enlace
         buttons.forEach(button => {
             button.addEventListener('click', (event) => {
                 event.preventDefault(); // Evita el comportamiento predeterminado del enlace
