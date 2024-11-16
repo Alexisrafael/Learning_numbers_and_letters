@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>app</title>
+</head>
+<body>
+    <nav class="nav-conteiner">
+        <h3><a class="title-link" href="./index.html">Sistema educativo</a></h3>
+        <div class="conteiner-button">
+            <a class="button" href="#section1" data-section="section1">Contenido Teórico</a>
+            <a class="button" href="#section2" data-section="section2">Contenido Práctico</a>
+        </div>
+        
+    </nav>
+    <div id="content">
+        <!-- Secciones del contenido -->
+        <section id="section1" class="content-section" style="display: none;">
+            <h2>Contenido Teórico</h2>
+            <p>Este es el contenido teórico que se muestra dinámicamente debajo del menú.</p>
+        </section>
+        <section id="section2" class="content-section" style="display: none;">
+            <h2>Contenido Práctico</h2>
+            <p>Este es el contenido práctico que se muestra dinámicamente debajo del menú.</p>
+        </section>
+    </div>
+
+    <script>
+        // Selecciona todos los botones
+        const buttons = document.querySelectorAll('.button');
+        const sections = document.querySelectorAll('.content-section');
+
+        // Añade evento de clic a cada botón
+        buttons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+                // Obtén el ID de la sección a mostrar
+                const sectionId = button.getAttribute('data-section');
+
+                // Oculta todas las secciones
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+
+                // Muestra solo la sección seleccionada
+                const selectedSection = document.getElementById(sectionId);
+                if (selectedSection) {
+                    selectedSection.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
