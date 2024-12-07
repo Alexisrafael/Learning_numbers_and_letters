@@ -39,3 +39,21 @@ body{
     }
 }
 
+.style-margin{
+    margin: 1%;
+}
+
+.fondo{
+    background-color: #c46de1;
+}
+
+
+.agrandar-div{
+    background-color: aliceblue !important;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 10px;
+}
+.agrandar-div:hover{
+    background-color: rgb(211, 234, 246) !important;
+    transform: scale(1.1);
+}
