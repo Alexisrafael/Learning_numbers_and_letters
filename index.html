@@ -24,11 +24,58 @@
         <!-- Secciones del contenido -->
 
         <!-- Pagina de inicio -->
-        <section id="section1" class="content-section" style="display: block; padding: 2%;">
-            <h5>Bienvenidos a mi Página</h5>
-            <br>
-            <p style="font-size: 12.5px">La persistencia es la capacidad de seguir intentando algo, incluso cuando es difícil o lleva mucho tiempo lograrlo. Imagina que quieres aprender a andar en bicicleta: al principio, puedes caerte o sentir que no lo vas a lograr, pero si sigues intentándolo y no te rindes, eso es persistencia. <br> <br>Ser persistente es como tener una "fuerza extra" para seguir adelante sin importar los obstáculos. Las personas persistentes creen que, con esfuerzo y paciencia, pueden mejorar y alcanzar sus metas.</p>
-            
+        <section id="section1" class="content-section" style="display: block; padding: 2%; background: linear-gradient(to right, rgb(11, 209, 183) 25%, rgb(250, 233, 0) 50%, rgb(59, 216, 59) 75%);;">
+            <div style="text-align: center !important;">
+
+                <h2>Pequeños exploradores</h2>
+                <br>
+                <p style="font-family: Arial, sans-serif; font-size: 16px;">Descubre una nueva forma de aprender jugando.
+                    <br><br>
+                    Ésta plataforma esta diseñada para transformar el aprendizaje de los niños en una experiencia divertida y emocionante.<br><br>
+                    Con juegos interactivos y personajes amigables, los niños pueden aprender letras y números mientras se divierten.</p>
+                    <br>
+                <h2>Slogan</h2>
+                <br>
+                <p style="font-family: Arial, sans-serif; font-size: 16px;">''El aprendizaje es un juego, ¡descúbrelo con nosotros!''</p>
+            </div>
+           <br><br>
+           <div style="text-align: center !important; ">
+                
+                <h4>¿Qué papel importante juega esta página para el aprendizaje de tus niños?</h4>
+           </div>
+            <div style="display: flex
+            ;
+                text-align: center !important;
+                width: 100%;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: space-around;">
+                <div style="width: 30%; display:flex; flex-direction: column; justify-content: center;">
+                    <img style="width: 486px; margin-left: -60px;" src="./img/home/img_monster_inc.png" alt="">
+                        <p >
+                            °Fomenta una base sóida: Ayuda a los niños a desarrollar las habiilidades fundamentales de lectura y escritura, así como el pensamiento matemático básico.
+                        </p>
+                </div>
+                <div style="width: 30%; display:flex; flex-direction: column; justify-content: center;">
+                    <img style="width: 250px; margin-left: 70px;" src="./img/home/img_doki.png" alt="">
+                         
+                        <p>
+                           °Despierta la curiosidad: A través de actividades divertidas y juegos, estimula el interés de los niños por el aprendizaje y la exploración del mundo que les rodea
+                        </p>
+                    
+                </div>
+                <div style="width: 30%; display:flex; flex-direction: column; justify-content: center;">
+                    <img style="width: 318px; margin-left: 40px;" src="./img/home/img_exploradores_aprendiendo.png" alt="">
+        
+                        <p>
+                           °Desarrola habilidades cognitivas: Mejora la memoria, la atención, la concentración y la capacidad de resolución de problemas, habilidades esenciales para el desarrollo integral del niño
+                        </p>
+
+                    
+                </div>
+                   
+
+            </div>
         </section>
 
         <!-- Primer boton de contenido  Teórico-->
@@ -307,6 +354,7 @@
                 const selectedSection = document.getElementById(sectionId);
                 if (selectedSection) {
                     selectedSection.style.display = 'block';
+                    selectedSection.style.padding = '2%';
                 }
             });
         });
