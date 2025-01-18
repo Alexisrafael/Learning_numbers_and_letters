@@ -1,9 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.border-bottom {
+    border-bottom: 2px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.montserrat {
+    font-family: "Henny Penny", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(219, 13, 109);
+    border-bottom: 2px solid green;
+}
+
+.babas-estatico {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.destacado {
+    color: rgb(4, 4, 102);
+}
+
 body{
     font-family: "Poppins", sans-serif;
 }
 
+.babas-estatico {
+    background: linear-gradient(to right, rgb(240, 33, 33), rgb(154, 207, 7));
+    color: transparent;
+    background-clip: text;  
+    border-bottom-left-radius: 20px;
+    border-left-width: 10px;
+    border-left-style: double;
+    border-left-color: #ff0000; 
+    border-top-right-radius: 20px;
+    border-right-width: 10px;
+    border-right-style: double;
+    border-right-color: rgb(214, 10, 71);
+}
+
+.texto {
+    color: #000a92d0;
+    font-family: "Yeon Sung", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-top-right-radius: 20px;
+    border-right-width: 10px;
+    border-right-style: double;
+    border-right-color: rgb(214, 10, 71);
+}
+.que_papel {
+    font-family: "Montserrat Subrayada", serif;
+    font-size: 32px;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(255, 72, 0);
+}
 .nav-conteiner{
     width: 100%;
     height: 4rem;
@@ -56,4 +113,61 @@ body{
 .agrandar-div:hover{
     background-color: rgb(211, 234, 246) !important;
     transform: scale(1.1);
+}
+
+.cloud {
+    margin-top: 4%;
+    width: 200px;
+    height: 45px;
+    background: rgb(134, 249, 232);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 5% 15% rgb(0, 0, 0 0.2);
+}
+
+.cloud::before,
+.cloud::after{
+    content: "";
+    position: absolute;
+    background: rgb(134, 249, 232);;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.cloud::before {
+    width: 120px;
+    height: 60px;
+    top: -30px;
+    right: -20px;
+}
+
+.cloud::after {
+    width: 160px;
+    height: 80px;
+    top: -40px;
+    left: -10;
+}
+
+.cloud-next {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: traslate(-50%, -50%);
+    font-size: 20px;
+    color: #555;
+    font-weight: bold;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.background-home {
+    background-image: url("../img/home/reflejos_coloridos.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: #f0f0f0;
 }
