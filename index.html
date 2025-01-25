@@ -339,11 +339,105 @@
 
         <!-- Segundo boton de contenido Practico -->
         <section id="section3" class="content-section" style="display: none;">
-            <h2>Contenido Práctico</h2>
-            <p>Este es el contenido práctico que se muestra dinámicamente debajo del menú.</p>
+            <title>Juego de Suma</title>
+            <h1 style="padding: 2%;">Juego de Sumas</h1>
+            <div class="container" style="padding: 2%;"> 
+                <div class="izquierdo">
+                    <div class="container-operacion">
+                        <span id="suma">9 + 9 </span><span>=</span>
+                        <span class="resultado" id="resultado">18</span>
+                    </div>
+                    <span id="msj" class="msj">EXCELENTE!!</span>
+                </div>
+
+                <div class="derecha">
+                    <span id="opi1" class="opcion" onclick="controlarRespuesta(this)">18</span>
+                    <span id="opi2" class="opcion" onclick="controlarRespuesta(this)">18</span>
+                    <span id="opi3" class="opcion" onclick="controlarRespuesta(this)">18</span> 
+                </div>
+            </div>
         </section>
     </div>
 
     <script src="js/index.js"></script>
+    <script>
+     
+        //varialbles que almacenaran los dos numeros de la suma
+        var num1, num2;
+        //varialble para guardar el resultado de la suma 
+        var respueta;
+        //varialble donde se cargara la opcion correcta
+        var indiceOpCorrecta;
+
+        //todos los elementos que voy a manipular de la pagina
+        text_suma = document.getElementById("suma")
+        Opi1= document.getElementById("opi1")
+        Opi2= document.getElementById("opi2")
+        Opi3= document.getElementById("opi3")
+        text_msj = document.getElementById("msj")
+        text_resultado = document.getElementById("resultado");
+
+        function comenzar(){
+            //cada vez que inicie limpio los campos 
+            text_resultado.innerHTML = " ?";
+            text_msj.innerHTML  = "";
+
+            //genero la suma aleatorias entre 0 y 9
+            num1 = Math.round(Math.random()*9);
+            num2 = Math.round(Math.random()*9);
+            respueta = num1 + num2;
+
+            //asignamos la suma para que visualice
+            text_suma.innerHTML = num1 + " + " +  num2;
+
+            //genero un numero entre 0 y dos para colocar la opcion correcta
+            indiceOpCorrecta = Math.round(Math.random()*2);
+            if(indiceOpCorrecta==0){ //ponemos la opcion correcta en la primera posicion
+                Opi1.innerHTML = respueta;
+                //al resto le doy numeros cercanos a la repuesta correcta
+                Opi2.innerHTML = respueta + 1;
+                Opi3.innerHTML = respueta - 1;
+            }else if(indiceOpCorrecta=1){ //ponemos la opcion correcta en la psegunda posicion
+                Opi2.innerHTML = respueta;
+                //al resto le doy numeros cercanos a la repuesta correcta
+                Opi1.innerHTML = respueta + 2;
+                Opi3.innerHTML = respueta - 1;
+
+            }else if(indiceOpCorrecta=2){ //ponemos la opcion correcta en la tercera posicion
+                Opi3.innerHTML = respueta;
+                //al resto le doy numeros cercanos a la repuesta correcta
+                Opi1.innerHTML = respueta + 1;
+                Opi2.innerHTML = respueta - 1;
+
+            }
+
+        }
+
+        //funcion que chequear la respuesta elegida por el usuario
+        function controlarRespuesta(opcionElegida){
+            //cargamos la respuesta elegida en la operacion
+            text_resultado.innerHTML = opcionElegida.innerHTML;
+
+            //controlamos si esta bien
+            if(respueta == text_resultado.innerHTML){
+                text_msj.innerHTML = "EXCELENTE!!";
+                text_msj.style.color = "green";
+                //eseramos dos segundos y volvemos a llamar a la funcion comenzar
+                setTimeout(comenzar, 2000);
+            }else{
+                text_msj.innerHTML = "INTENTA DE NUEVO!!";
+                text_msj.style.color = "red";
+                //eseramos dos segundos y limpiamos los campos
+                setTimeout(limpiar, 2000);
+            }
+        }
+
+        function limpiar(){
+            text_resultado.innerHTML = " ?";
+            text_msj.innerHTML  = "";
+        }
+
+        comenzar()
+    </script>
 </body>
 </html>
