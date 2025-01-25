@@ -69,6 +69,7 @@ Aunque el proyecto fue diseñado como una introducción al desarrollo web, se id
 Este proyecto fue desarrollado por estudiantes de la universidad Nacional Experimental de las Fuerzas Armadas (UNEFA) de la carrera de Ingeniería de Sistema bajo mi supervisión.
 
 - **Scarlet Isabel García García** [GitHub](https://github.com/ScarletIGG)
+- **Marcela Valentina Jiménez Morales** [GitHub](https://github.com/marcelajM12)
 - **Yorgelys Joselyn Quero Medina** [GitHub](https://github.com/yorgelysjmj)
 
 Agradezco el entusiasmo y la dedicación de los participantes, quienes demostraron un gran interés en aprender y mejorar sus habilidades.
