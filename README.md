@@ -1,7 +1,7 @@
 
 # Learning Numbers and Letters
 
-Este repositorio contiene el proyecto **Learning Numbers and Letters**, desarrollado por un grupo de estudiantes de la carrera universitaria de Ingeniería de Software, con mi asesoría durante el proceso. Este fue el primer proyecto del grupo, diseñado para introducir a los estudiantes en el desarrollo web utilizando tecnologías básicas como HTML, CSS y JavaScript.
+Este repositorio contiene el proyecto **Learning Numbers and Letters**, desarrollado por un grupo de estudiantes de la carrera universitaria de Ingeniería de Sistema, con mi asesoría durante el proceso. Este fue el primer proyecto del grupo, diseñado para introducir a los estudiantes en el desarrollo web utilizando tecnologías básicas como HTML, CSS y JavaScript.
 
 ## Descripción del Proyecto
 
@@ -66,12 +66,17 @@ Aunque el proyecto fue diseñado como una introducción al desarrollo web, se id
 
 ## Contribuciones
 
-Este proyecto fue desarrollado por estudiantes de Ingeniería de Software bajo mi supervisión. Agradezco el entusiasmo y la dedicación de los participantes, quienes demostraron un gran interés en aprender y mejorar sus habilidades.
+Este proyecto fue desarrollado por estudiantes de la universidad Nacional Experimental de las Fuerzas Armadas (UNEFA) de la carrera de Ingeniería de Sistema bajo mi supervisión.
+
+- **Scarlet Isabel García García**
+- **Yorgelys Joselyn Quero Medina**
+
+Agradezco el entusiasmo y la dedicación de los participantes, quienes demostraron un gran interés en aprender y mejorar sus habilidades.
 
 ## Contacto
 
 Si deseas más información sobre este proyecto o tienes preguntas, no dudes en contactarme:
-- **Nombre**: Alexis Piña
+- **Nombre**: **Alexis Piña**
 - **Email**: alexis24450@gmail.com
 - **LinkedIn**: https://www.linkedin.com/in/alexis-pi%C3%B1a-261174230/
 
