@@ -1,26 +1,25 @@
-// Seleccionamos los botones del menú y el contenedor de contenido
-const buttons = document.querySelectorAll('.button');
-const contentArea = document.getElementById('content');
+// Selecciona todos los botones y enlaces
+const buttons = document.querySelectorAll('.button, .title-link');
+const sections = document.querySelectorAll('.content-section');
 
-// Escucha los clics en los botones
+// Añade evento de clic a cada botón o enlace
 buttons.forEach(button => {
-    button.addEventListener('click', event => {
-        event.preventDefault(); // Evita que el navegador recargue la página
-        const file = button.getAttribute('data-file'); // Obtén el archivo a cargar
+    button.addEventListener('click', (event) => {
+        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
 
-        // Usa fetch para cargar el archivo
-        fetch(file)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Error al cargar el contenido');
-                }
-                return response.text();
-            })
-            .then(html => {
-                contentArea.innerHTML = html; // Inserta el contenido en el contenedor
-            })
-            .catch(error => {
-                contentArea.innerHTML = `<p>Error al cargar el contenido: ${error.message}</p>`;
-            });
+        // Obtén el ID de la sección a mostrar
+        const sectionId = button.getAttribute('data-section');
+
+        // Oculta todas las secciones
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+
+        // Muestra solo la sección seleccionada
+        const selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.style.display = 'block';
+            selectedSection.style.padding = '2%';
+        }
     });
 });
