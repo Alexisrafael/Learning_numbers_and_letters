@@ -42,6 +42,12 @@ Learning_numbers_and_letters/
 
 2. **Abrir el archivo `index.html` en el navegador** para ejecutar la aplicación.
 
+## Servidor de prueba
+
+El proyecto se encuentra alojado en un servidor de prueba en Vercel. Puedes acceder a la aplicación en el siguiente enlace:
+
+https://learning-numbers-and-letters.vercel.app/
+
 ## Lecciones aprendidas
 
 Durante el desarrollo de este proyecto, los estudiantes pudieron:
